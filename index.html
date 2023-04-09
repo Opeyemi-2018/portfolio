@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <link rel="stylesheet" href="ope-site.css">
+</head>
+
+<body>
+    <div id="home" class="main-header">
+        <header id="header">
+            <div class="logo">
+                <a href="#home"> <img src="images/ope-logo.png" alt=""></a>
+            </div>
+
+            <nav id="nav-bar" class="nav-bar">
+                <div class="close btn">
+                    <i class=" fas fa-times"></i>
+                </div>
+                <a href="#home" class="active">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#service">SERVICE</a>
+                <a href="#test">TESTIMONIAL</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+            <div class="open btn">
+                <i class=" fas fa-bars"></i>
+            </div>
+        </header>
+        <div class="home-content">
+            <h3>Hello, I'm Opeyemi Odunayo</h3>
+            <h2>A <span>FrontEnd Developer</span> and a <span>Digital Marketer</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A libero sit quibusdam
+                hic alias nulla dolores accusantium vitae. Sint cumque impedit repellendus atque. </p>
+            <a href="#contact"><button>Hire Me Now</button></a>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <section class="about-us">
+            <h1>Get To Know Me</h1>
+            <div class="row">
+                <div class="about-col">
+                    <img src="images/ope.jpg" alt="">
+                </div>
+                <div class="about-col">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid expedita
+                        accusamus repudiandae temporibus, enim cumque! Quos ipsa maiores doloribus soluta,
+                        vel corrupti omnis similique? Cumque, officia nostrum obcaecati vitae perferendis adipisci?
+                        Explicabo illum libero laborum fuga non debitis eum rerum sunt voluptate quia eaque unde harum
+                        qui numquam velit quidem odit aperiam consequuntur ratione corrupti quibusdam tenetur ipsum,
+                        molestiae provident. Eveniet possimus, iste quae incidunt animi expedita. Repellat, eius dolore.
+                    </p>
+                    <a href="#contact"><button class="about-btn">Contact Me</button></a>
+
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <section id="service" class="service">
+        <h1>
+            SERVICES
+        </h1>
+        <p>i offer the following</p>
+
+        <div class="row">
+            <div class="service-col">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>App Development</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam labore quam at cupiditate?
+                </p>
+            </div>
+            <div class="service-col">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam labore quam at cupiditate?
+                </p>
+            </div>
+            <div class="service-col">
+                <i class="fas fa-palette"></i>
+                <h3>Graphics Designing</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam labore quam at cupiditate?
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!---------------------------testimonial section--------------------------------------->
+    <section id="test" class="test">
+        <h1>TESTIMONIAL</h1>
+        <p class="p-t">What My Client say's</p>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img class="img" src="images/ope.jpg" alt="">
+                <p class="text">
+                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, reiciendis est voluptatem porro
+                    velit nostrum."
+                </p>
+                <h4 class="username">
+                    Opeyemi
+                </h4>
+            </div>
+        </div>
+    </section>
+    <!---------------------------contact-------------------------->
+
+    <section id="contact" class="contact">
+        <h1>CONTACT</h1>
+        <form action="https://formspree.io/f/mvonvznn"
+        method="POST">
+            <div class="c-row">
+                <div class="input-group">
+                    <label for="name"> Your name</label>
+                    <input type="text" name="name" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label for="number">Your No</label>
+                    <input type="number" name="phone" id="number" placeholder="+123" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Id</label>
+                <input type="email" name="email" id="email" placeholder="@" required>
+
+            </div>
+            <div class="input-group">
+                <label for="message">Your Message</label>
+                <textarea id="message"  name="message" placeholder="Your business idea..." rows="8"></textarea>
+            </div>
+
+            <button type="submit" id="c-btn"><i class="fas fa-paper-plane"></i> SUBMIT</button>
+        </form>
+    </section>
+
+    <section class="footer">
+        <div class="footer-col">
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="p-text">Copyright &copy; 2023 Opeyemi</div>
+        </div>
+    </section>
+
+    <script src="ope-site.js"></script>
+</body>
+
+</html>
