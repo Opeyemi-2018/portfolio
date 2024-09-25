@@ -7,6 +7,14 @@ import { LiaTimesSolid } from "react-icons/lia";
 const Header = () => {
   let [shownav, setShowNav] = useState(false);
   let { themeMode } = useContext(GlobalContext);
+
+  let scrollToSection = (sectionId) => {
+    let section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setShowNav(false);
+    }
+  };
   return (
     <header
       className={`shadow-lg ${
@@ -17,23 +25,25 @@ const Header = () => {
         <h1 className="font-bold md:text-3xl text-2xl">{"<op/>"}</h1>
         <div className="sm:flex hidden items-center gap-5 ">
           <ul
-            className={`flex uppercase items-center gap-4 font-semibold ${
+            className={`flex uppercase cursor-pointer items-center gap-4 font-semibold ${
               themeMode === "dark" ? "text-white" : "text-[#1f2937]"
             }`}
           >
-            <li>projects</li>
-            <li>contact</li>
+            <li onClick={() => scrollToSection("projects")}>projects</li>
+            <li onClick={() => scrollToSection("contact")}>contact</li>
           </ul>
           <ThemeButton />
-          <button
+          <a
+            href="/Opeyemi-CV.pdf"
+            download
             className={`${
               themeMode === "dark"
                 ? "bg-white text-[#030712]"
                 : "bg-[#030712] text-white"
             } px-2 py-1 rounded-md`}
           >
-            download
-          </button>
+            Download CV
+          </a>
         </div>
         <button
           className="sm:hidden inline"
@@ -55,29 +65,31 @@ const Header = () => {
         }`}
       >
         <ul
-          className={`flex flex-col capitalize text-[19px] font-semibold gap-4  ${
+          className={`cursor-pointer flex flex-col capitalize text-[19px]  gap-4  ${
             themeMode === "dark" ? "text-white" : "text-[#1f2937]"
           }`}
         >
-          <li>projects</li>
-          <li>contact</li>
+          <li onClick={() => scrollToSection("projects")}>projects</li>
+          <li onClick={() => scrollToSection("contact")}>contact</li>
         </ul>
         <h1
-          className={`flex justify-between text-[19px] font-semibold capitalize ${
+          className={`flex justify-between text-[19px]  capitalize ${
             themeMode === "dark" ? "text-white" : "text-[#1f2937]"
           }`}
         >
           Switch Theme <ThemeButton />
         </h1>
-        <button
+        <a
+          href="/Opeyemi-CV.pdf"
+          download
           className={` w-full ${
             themeMode === "dark"
               ? "bg-white text-[#030712]"
               : "bg-[#030712] text-white"
-          } p-2 rounded-md`}
+          } p-2 rounded-md text-center`}
         >
-          download
-        </button>
+          Download CV
+        </a>
       </div>
     </header>
   );

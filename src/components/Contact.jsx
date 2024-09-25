@@ -19,7 +19,7 @@ const Contact = () => {
       <div className="flex items-center gap-10">
         <a href="mailto:opeyemiodunayo2018@gmail.com?subject=Hello&body=Hi%20there!">
           <MdEmail
-            className={`text-3xl ${
+            className={`text-4xl ${
               themeMode === "light" ? "text-[#030712]" : "text-[#d1d5db]"
             }`}
           />
@@ -35,7 +35,11 @@ const Contact = () => {
             }`}
           />
         </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/Opeyemi-2018"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithubSquare
             className={`text-3xl ${
               themeMode === "light" ? "text-[#030712]" : "text-[#d1d5db]"
