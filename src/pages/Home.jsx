@@ -24,7 +24,7 @@ const Home = () => {
           themeMode === "light" ? "bg-white" : "bg-[#030712]"
         }`}
       >
-        <div className="max-w-6xl mx-auto sm:pt-28 pt-10 pb-2  flex md:flex-row flex-col  md:gap-28 gap-3 justify-between">
+        <div className="max-w-6xl mx-auto sm:pt-28 pt-10 pb-2  flex lg:flex-row flex-col   justify-between">
           <div data-aos="fade-down" className="flex flex-col gap-2 flex-1">
             <h1
               className={`mb-4 flex items-center gap-2 text-nowrap capitalize font-bold md:text-6xl text-3xl ${
@@ -50,13 +50,10 @@ const Home = () => {
               <Technology />
             </div>
           </div>
-          <div
-            data-aos="fade-down"
-            className="flex items-center justify-center"
-          >
+          <div data-aos="fade-down" className="">
             <img
               src={homeImage}
-              className="md:w-full w-full  sm:h-72 h-64   inline border rounded-lg border-gray-400 object-cover"
+              className=" lg:w-52 lg:h-52 w-full h-full inline border rounded-lg border-gray-400 object-cover"
               alt=""
             />
           </div>
