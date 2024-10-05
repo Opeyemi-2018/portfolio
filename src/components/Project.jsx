@@ -30,7 +30,7 @@ const Project = () => {
       </h1>
 
       <span
-        className={`flex items-center md:gap-8 gap-4  mb-2 md:text-2xl text-1xl ${
+        className={`flex items-center md:gap-8 gap-4  mb-2 md:text-2xl text-[20px] ${
           themeMode === "light" ? "text-[#030712]" : "text-[#f3f4f6]"
         }`}
       >
