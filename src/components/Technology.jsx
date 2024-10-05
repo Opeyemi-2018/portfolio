@@ -19,7 +19,7 @@ const Technology = () => {
           themeMode === "light" ? "text-black" : "text-[#6b7280]"
         }`}
       >
-        Some technologies i'm good at:{" "}
+        Some technologies I'm good at:{" "}
       </h1>
       <div className="flex items-center sm:flex-nowrap flex-wrap md:gap-5 gap-3 mt-2">
         <span className={`flex flex-col items-center justify-between `}>
