@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../global";
 import { PiHandWavingFill } from "react-icons/pi";
-import homeImage from "../../public/ope-profile-cropped.jpg";
+import homeImage from "/ope-profile-cropped.jpg";
 import Technology from "../components/Technology";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
@@ -31,7 +31,7 @@ const Home = () => {
                 themeMode === "dark" ? "text-white" : "text-[#030712]"
               }`}
             >
-              hi, i'm opeyemi
+              Hi, i'm opeyemi
               <span className="text-yellow-500 ">
                 <PiHandWavingFill />
               </span>

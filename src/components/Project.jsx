@@ -7,25 +7,56 @@ import ProjectData from "./ProjectData";
 const Project = () => {
   let { themeMode } = useContext(GlobalContext);
   let [projects, setProjects] = useState(ProjectData);
-  console.log(projects);
+  let [category, setCategory] = useState("all");
 
-  // let selectedProject = projects.filter(
-  //   (project) => project.category === category
-  // );
+  useEffect(() => {
+    if (category === "all") {
+      setProjects(ProjectData);
+    } else {
+      setProjects(
+        ProjectData.filter((project) => project.category === category)
+      );
+    }
+  }, [category]);
 
   return (
     <div>
       <h1
-        className={`sm:text-2xl text-[16px] mb-3 ${
+        className={`sm:text-2xl text-[16px] mb-3 underline ${
           themeMode === "light" ? "text-[#030712]" : "text-[#f3f4f6]"
         }`}
       >
-        Some of my amazing projects
+        Projects
       </h1>
+
+      <span
+        className={`flex items-center md:gap-8 gap-4  mb-2 md:text-2xl text-1xl ${
+          themeMode === "light" ? "text-[#030712]" : "text-[#f3f4f6]"
+        }`}
+      >
+        <button
+          className={`${category === "all" ? "underline" : ""}`}
+          onClick={() => setCategory("all")}
+        >
+          all
+        </button>
+        <button
+          className={`${category === "fullstack" ? "underline" : ""}`}
+          onClick={() => setCategory("fullstack")}
+        >
+          fullstack-MERN
+        </button>
+        <button
+          className={`${category === "frontend" ? "underline" : ""}`}
+          onClick={() => setCategory("frontend")}
+        >
+          frontend-JS
+        </button>
+      </span>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
         {projects.map((project) => {
-          let { id, category, image, link, name } = project;
+          let { id, image, link, name } = project;
           return (
             <div key={id}>
               <a
