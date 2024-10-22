@@ -21,15 +21,15 @@ const Technology = () => {
       >
         Some technologies I'm good at:{" "}
       </h1>
-      <div className="flex items-center sm:flex-nowrap flex-wrap md:gap-5 gap-3 mt-2">
+      <div className="flex items-center sm:flex-nowrap flex-wrap md:gap-5 gap-3 mt-2 ">
         <span className={`flex flex-col items-center justify-between `}>
-          <IoLogoJavascript className="bg-yellow-400 sm:text-4xl text-2xl" />{" "}
+          <IoLogoJavascript className="bg-yellow-400 sm:text-4xl text-2xl " />{" "}
           <h1 className="text-[#6b7280] sm:text-[14px] text-[12px]">
             Javascript
           </h1>
         </span>
         <span className={`flex flex-col items-center justify-between `}>
-          <FaReact className="text-[#61DAFB] sm:text-4xl text-2xl" />{" "}
+          <FaReact className="text-[#61DAFB] sm:text-4xl text-2xl animate-spin" />{" "}
           <h1 className="text-[#6b7280] sm:text-[14px] text-[12px]">React</h1>
         </span>
         <span className={`flex flex-col items-center justify-between `}>
@@ -77,9 +77,11 @@ const Technology = () => {
           <SiPostman
             className={`${
               themeMode === "light" ? "text-red-700" : "text-red-700"
-            } sm:text-4xl text-2xl`}
+            } sm:text-4xl text-2xl `}
           />
-          <h1 className="text-[#6b7280] sm:text-[14px] text-[12px]">Postman</h1>
+          <h1 className="text-[#6b7280] sm:text-[14px] text-[12px] ">
+            Postman
+          </h1>
         </span>
       </div>
     </>

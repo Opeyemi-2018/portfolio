@@ -54,7 +54,7 @@ const Project = () => {
         </button>
       </span>
 
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+      <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-5">
         {projects.map((project) => {
           let { id, image, link, name } = project;
           return (

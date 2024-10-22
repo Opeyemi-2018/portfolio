@@ -32,7 +32,14 @@ const Home = () => {
               }`}
             >
               Hi, i'm opeyemi
-              <span className="text-yellow-500 ">
+              <span
+                className="text-yellow-500"
+                style={{
+                  display: "inline-block",
+                  transformOrigin: "70% 70%",
+                  animation: "wave 1s ease-in-out infinite",
+                }}
+              >
                 <PiHandWavingFill />
               </span>
             </h1>
@@ -42,7 +49,7 @@ const Home = () => {
               }`}
             >
               A software engineer proficient with the MERN stack(MongoDB,
-              Express.js, React, and Node.js.) I specialize in building
+              Express.js, React.js, and Node.js.) I specialize in building
               full-stack web applications, developing robust server-side APIs,
               and creating dynamic, responsive frontend interfaces.{" "}
             </p>
