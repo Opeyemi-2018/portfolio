@@ -1,22 +1,33 @@
 import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../global";
 import { BsFillSendFill } from "react-icons/bs";
-import { LiaCodeSolid } from "react-icons/lia";
 import ProjectData from "./ProjectData";
 
 const Project = () => {
   let { themeMode } = useContext(GlobalContext);
   let [projects, setProjects] = useState(ProjectData);
   let [category, setCategory] = useState("all");
+  let [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    if (category === "all") {
-      setProjects(ProjectData);
-    } else {
-      setProjects(
-        ProjectData.filter((project) => project.category === category)
-      );
-    }
+    // Trigger the fade-out transition
+    setIsTransitioning(true);
+    // Delay for the duration of the fade-out transition (e.g., 300ms)
+    const timeoutId = setTimeout(() => {
+      if (category === "all") {
+        setProjects(ProjectData);
+      } else {
+        setProjects(
+          ProjectData.filter((project) => project.category === category)
+        );
+      }
+
+      // Trigger the fade-in transition after projects are set
+      setIsTransitioning(false);
+    }, 300);
+
+    // Cleanup the timeout when the component unmounts or when category changes
+    return () => clearTimeout(timeoutId);
   }, [category]);
 
   return (
@@ -54,11 +65,16 @@ const Project = () => {
         </button>
       </span>
 
-      <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-5">
+      <div
+        className={`grid md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-5 transition-opacity duration-200 ease-in-out ${
+          isTransitioning ? "opacity-10" : "opacity-100"
+        }`}
+      >
+        {" "}
         {projects.map((project) => {
           let { id, image, link, name } = project;
           return (
-            <div key={id}>
+            <div key={id} className="">
               <a
                 className=""
                 href={link}
@@ -91,7 +107,6 @@ const Project = () => {
             </div>
           );
         })}
-
         {/* <a
           className=""
           href="https://mern-estate-xjyv.onrender.com"
