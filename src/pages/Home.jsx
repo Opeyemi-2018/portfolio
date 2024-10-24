@@ -57,10 +57,10 @@ const Home = () => {
               <Technology />
             </div>
           </div>
-          <div data-aos="fade-down" className="">
+          <div data-aos="fade-down " className="">
             <img
               src={homeImage}
-              className=" lg:w-52 lg:h-52 w-full h-full inline border rounded-lg border-gray-400 object-cover"
+              className="  w-full lg:h-64 h-full inline border rounded-lg border-gray-400 object-cover"
               alt=""
             />
           </div>
