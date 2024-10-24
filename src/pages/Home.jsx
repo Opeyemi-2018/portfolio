@@ -60,7 +60,7 @@ const Home = () => {
           <div data-aos="fade-down " className="">
             <img
               src={homeImage}
-              className="  w-full lg:h-64 h-full inline border rounded-lg border-gray-400 object-cover"
+              className="  w-full lg:h-64 h-full inline sm:border-4  rounded-md  sm:border-gray-400 object-cover"
               alt=""
             />
           </div>
