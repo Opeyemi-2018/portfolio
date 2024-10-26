@@ -34,7 +34,7 @@ const Header = () => {
           </ul>
           <ThemeButton />
           <a
-            href="/Opeyemi-CV.pdf"
+            href="/Rabiu Opeyemi-Resume.pdf"
             download
             className={`${
               themeMode === "dark"
