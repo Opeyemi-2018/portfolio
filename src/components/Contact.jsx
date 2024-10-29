@@ -17,7 +17,7 @@ const Contact = () => {
         Get in touch
       </h1>
       <div className="flex items-center gap-10">
-        <a href="mailto:opeyemiodunayo2018@gmail.com">
+        <a href="mailto:rabiuopeyemi2020@gmail.com">
           <MdEmail
             className={`text-4xl ${
               themeMode === "light" ? "text-[#030712]" : "text-[#d1d5db]"
