@@ -80,7 +80,7 @@ const Header = () => {
           Switch Theme <ThemeButton />
         </h1>
         <a
-          href="/Opeyemi-CV.pdf"
+          href="/Rabiu Opeyemi CV.pdf"
           download
           className={` w-full ${
             themeMode === "dark"
