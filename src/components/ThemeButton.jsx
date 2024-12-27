@@ -12,11 +12,10 @@ const ThemeButton = () => {
       className=" rounded-full focus:outline-none"
       onClick={toggleThemeMode}
     >
-      {/* Conditionally render icons based on theme */}
       {themeMode === "light" ? (
-        <IoMoonSharp className="text-3xl text-slate-900" /> // Moon icon for dark mode
+        <IoMoonSharp className="text-3xl text-slate-900" /> 
       ) : (
-        <IoIosSunny className="text-3xl text-white" /> // Sun icon for light mode
+        <IoIosSunny className="text-3xl text-white" /> 
       )}
     </span>
   );
