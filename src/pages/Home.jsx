@@ -49,9 +49,10 @@ const Home = () => {
               }`}
             >
               A software engineer proficient with the MERN stack(MongoDB,
-              Express.js, React.js, and Node.js.) I specialize in building
-              full-stack web applications, developing robust server-side APIs,
-              and creating dynamic, responsive frontend interfaces.{" "}
+              Express.js, React.js, and Node.js.), as well as Next.js and
+              Nest.js. I specialize in building full-stack web applications,
+              developing robust server-side APIs, and creating dynamic,
+              responsive frontend interfaces.{" "}
             </p>
             <div className="md:inline hidden">
               <Technology />
