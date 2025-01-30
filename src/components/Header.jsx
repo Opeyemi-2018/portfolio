@@ -34,7 +34,7 @@ const Header = () => {
           </ul>
           <ThemeButton />
           <a
-            href="/my resume.pdf"
+            href="/opeyemi odunayo.pdf"
             download
             className={`${
               themeMode === "dark"
@@ -80,7 +80,7 @@ const Header = () => {
           Switch Theme <ThemeButton />
         </h1>
         <a
-          href="/my resume.pdf"
+          href="//opeyemi odunayo.pdf"
           download
           className={` w-full ${
             themeMode === "dark"
